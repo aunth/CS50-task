@@ -1,0 +1,17 @@
+.main_body{
+    margin: 70px;
+}
+
+h2, h3{
+    padding: 10px;
+}
+
+.name_game{
+    background-color: blue;
+    font-size: 60px;
+    color: white;
+    height: 250px;
+    text-align: center;
+}
+
+

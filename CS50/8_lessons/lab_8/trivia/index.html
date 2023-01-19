@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>If 15 and 10 are sides of rectangle, so area equal</h3>
+                    <button id="second">50</button>
+                    <button id="first">150</button>
+                    <button id="third">300</button>
+                <p id="answer"></p>
+
+                <script>
+                    document.getElementById('first').addEventListener('click', function (){
+                        this.style.backgroundColor = "green";
+                        document.getElementById('answer').innerHTML = "Correct"
+                        defaulColor(['second', 'third'])
+
+                    })
+                    document.getElementById('second').addEventListener('click', function (){
+                        this.style.backgroundColor = "red";
+                        document.getElementById('answer').innerHTML = 'Incorerct'
+                        defaulColor(['first', 'third'])
+                    })
+                    document.getElementById('third').addEventListener('click', function (){
+                        this.style.backgroundColor = "red";
+                        document.getElementById('answer').innerHTML = "Incorrect"
+                        defaulColor(['second', 'first'])
+                    })
+
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>When Python was wrote?(year)</h3>
+                <input type="text" id="ans">
+                <button id="check_ans">Check answer</button>
+                <p id="full_answer"></p>
+                <script>
+                    document.getElementById('check_ans').addEventListener('click', function (){
+                        if (document.getElementById('ans').value === '1991'){
+                            document.getElementById('full_answer').innerHTML = "Correct";
+                        } else {
+                            document.getElementById('full_answer').innerHTML = "Incorrect";
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

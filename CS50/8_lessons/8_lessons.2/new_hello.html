@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            New hello program
+        </title>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;">
+            <input autocomplete="off" id="name" autofocus type="text" placeholder="type your name">
+            <input type="submit">
+        </form>
+
+        <script>
+            function greet(){
+                let name = document.querySelector('#name').value
+                alert('hello '+ name);
+            }
+
+            document.querySelector("form").addEventListener("submit", greet)
+        </script>
+    </body>
+</html>
